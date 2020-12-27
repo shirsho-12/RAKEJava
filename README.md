@@ -7,3 +7,26 @@ The implementation follows from https://github.com/aneesha/RAKE 's Python3 model
 
 ## Example code
 
+```
+import src.rake;
+
+public void run(){
+  // make new model object
+  RakeModel model = new RakeModel();
+  
+  // configurable options directly accessible from model object
+  model.minKeywordFrequency = 2;   // Setting minimum number of times keyword has to appear in text to 2 (default 1)
+  // Uses the Jsoup library to extract all paragraph text from Wikipedia's entry on Cheese
+  String text = Jsoup.connect("https://www.wikipedia.org/wiki/Cheese")..getElementsByTag("p").text();
+  // Get a reverse-sorted array (in order of decreasing scores) of keywords 
+  ArrayList<String> keywords = model.run(text);  
+  int i = 0;
+  // Get top 10 results
+  for (String keyword: keywords) {
+      System.out.println(keyword + ": " + model.candidateScores.get(keyword));
+      i++;
+      if (i >= 10) break;
+  }
+}
+
+```
