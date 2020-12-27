@@ -26,8 +26,8 @@ feature described in section 1.2.3 of the original paper. Note that this creates
 need to modify the metric for the candidate score, because the adjoined candidates
 have a very high score (because of the nature of the original score metric)
 
-NOTE 3: Python code from aneesha (https://https://github.com/zelandiya/RAKE-tutorial) is
-converted to Java in the package by me.
+NOTE 3: This repository converts Python code from aneesha (https://https://github.com/zelandiya/RAKE-tutorial) to
+Java and removes the need for external txt files for a self-contained program.
  */
 public class RakeModel {
     ArrayList<String> stopWords = new StopWords().getStopWords();
