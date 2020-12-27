@@ -1,7 +1,5 @@
 package src.rake;
 
-import src.finalproject.Sorting;
-
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -199,6 +197,6 @@ public class RakeModel {
         HashMap<String, Double> wordScores = calculateWordScore(phraseArray);
 
         candidateScores = getCandidateScores(phraseArray, wordScores);
-        return Sorting.fastSort(candidateScores);
+        return Sorting.Sort(candidateScores);
     }
 }
