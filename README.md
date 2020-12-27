@@ -7,8 +7,8 @@ The implementation follows from https://github.com/aneesha/RAKE 's Python3 model
 
 ## Example code
 
-```
-java
+``'java
+
 import src.rake;
 
 public void run(){
